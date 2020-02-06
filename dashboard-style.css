@@ -1,0 +1,73 @@
+/* color scheme
+Mint : #3BBA9C
+Dark Navy: #2E3047
+Grey: #43455C
+Dark Grey: #3C3F58
+Light Navy: #707793 
+*/
+html{
+    color: #3BBA9C;
+    font-size: 16px;
+}
+
+body{
+ background-color: skyblue;   
+ display: flex;
+}
+
+header{ 
+    background-color: #3C3F58;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.menu-contain a{ 
+    text-decoration: none; 
+    color: #3BBA9C; 
+}
+
+main{ 
+    display: grid;
+    grid-template-areas: 
+    "profile-contain profile-contain profile-contain"
+    "news-contain market-contain agenda-contain" 
+    "news-contain market-contain agenda-contain"
+    "forecast-contain forecast-contain forecast-contain";
+    grid-template-rows: 100px 200px 200px 120px;
+    grid-template-columns: 1fr 1fr 1fr; 
+    /* max-width: 900px; */
+    position: relative;
+    /* margin: auto; */
+    grid-gap: 2rem;
+    justify-content: center;
+    width: 100%; 
+    margin: .5rem; 
+}
+
+.profile-contain{
+    grid-area: profile-contain; 
+    background-color: green ;
+}
+
+.news-contain{ 
+    grid-area: news-contain; 
+    background-color: #3C3F58;
+}
+
+.market-contain{
+    grid-area: market-contain; 
+    background-color: coral;
+}
+
+.agenda-contain{
+    grid-area: agenda-contain; 
+    background-color: brown;
+}
+
+.forecast-contain{
+    grid-area: forecast-contain;
+    background-color: blue;
+}
