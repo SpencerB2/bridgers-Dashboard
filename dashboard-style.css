@@ -11,7 +11,7 @@ html{
 }
 
 body{
- background-color: skyblue;   
+ background-color: white;   
  display: flex;
 }
 
@@ -26,22 +26,23 @@ header{
 
 .menu-contain a{ 
     text-decoration: none; 
-    color: #3BBA9C; 
+    color: white; 
 }
 
 main{ 
     display: grid;
     grid-template-areas: 
     "profile-contain profile-contain profile-contain"
+    "news-title  market-title   agenda-title"
     "news-contain market-contain agenda-contain" 
     "news-contain market-contain agenda-contain"
     "forecast-contain forecast-contain forecast-contain";
-    grid-template-rows: 100px 200px 200px 120px;
+    grid-template-rows: 100px 80px 200px 200px 120px;
     grid-template-columns: 1fr 1fr 1fr; 
     /* max-width: 900px; */
     position: relative;
     /* margin: auto; */
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     justify-content: center;
     width: 100%; 
     margin: .5rem; 
@@ -49,14 +50,41 @@ main{
 
 .profile-contain{
     grid-area: profile-contain; 
-    background-color: green ;
+    background-color: white ;
+}
+
+/* START NEWS STYLING */
+.news-title{
+    display:grid; 
+    grid-area: news-title;
 }
 
 .news-contain{ 
     grid-area: news-contain; 
-    background-color: #3C3F58;
+    background-color: white;
 }
 
+.news-rss-feed{
+    height: 95%;
+    overflow:auto;
+    background-color:#3C3F58;
+    color:#3BBA9C;
+    scrollbar-base-color:gold;
+    font-family:sans-serif;
+    padding:10px;
+    text-decoration-color: #707793;
+}
+
+.feed-title a{
+    color: #3BBA9C; 
+}
+
+.feed-title-img{ 
+    padding: 0px .5rem 1rem 0px; 
+}
+
+
+/* MARKET STYLING */
 .market-contain{
     grid-area: market-contain; 
     background-color: coral;
