@@ -10,8 +10,8 @@
 </head>
 <body>
     <header>
-        <figure>
-            Toggle logo img
+        <figure class="border-logo">
+            <img src="./images/Headshot.jpg" alt="Spencer Heashot">
         </figure>
         <ul class="menu-contain">
             <li> <a href="">Spotify</a> </li>
@@ -61,13 +61,13 @@ Each feed item description is displayed in a tag with class feed-item-desc. -->
             <!-- https://www.tradingview.com/widget/advanced-chart/ -->
             <div class="tradingview-widget-container">
                 <div id="tradingview_a25f5"></div>
-                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank">
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"></a>
                 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                 <script type="text/javascript">
                 new TradingView.widget(
                 {
-                "width": 600,
-                "height": 550,
+                "width": 400,
+                "height": 538,
                 "symbol": "NDAQ",
                 "interval": "D",
                 "timezone": "Etc/UTC",
@@ -91,6 +91,7 @@ Each feed item description is displayed in a tag with class feed-item-desc. -->
             Todays Agenda
         </div>
         <section class="agenda-contain">
+            <!-- Widgit Source = https://calendar.google.com/calendar/r/settings/calendar/YnJpZGdlcnNraWRAZ21haWwuY29t -->
             <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=YnJpZGdlcnNraWRAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043&amp;mode=WEEK" style="border:solid 1px #777" width="500" height="500" frameborder="0" scrolling="no"></iframe>
         </section>
         <footer class="forecast-contain">
@@ -99,8 +100,6 @@ Each feed item description is displayed in a tag with class feed-item-desc. -->
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
             </script>
         </footer>
-
-
     </main>
 </body>
 </html>

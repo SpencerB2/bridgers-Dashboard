@@ -13,6 +13,7 @@ html{
 body{
  background-color: white;   
  display: flex;
+ justify-content: center;
 }
 
 header{ 
@@ -29,6 +30,18 @@ header{
     color: white; 
 }
 
+.border-logo{
+    margin: 0;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.border-logo img{
+    width: 5rem;
+    border-radius: 5rem;
+}
+
 main{ 
     display: grid;
     grid-template-areas: 
@@ -37,7 +50,7 @@ main{
     "news-contain market-contain agenda-contain" 
     "news-contain market-contain agenda-contain"
     "forecast-contain forecast-contain forecast-contain";
-    grid-template-rows: 60px 40px 250px 250px 120px;
+    grid-template-rows: 60px 40px 250px 250px 50px;
     grid-template-columns: 1fr 1fr 1fr; 
     position: relative;
     grid-gap: 0.5rem;
@@ -65,7 +78,7 @@ main{
 .news-rss-feed{
     height: 95%;
     overflow:auto;
-    background-color:#3C3F58;
+    background-color:whtie;
     color:#3BBA9C;
     scrollbar-base-color:gold;
     font-family:sans-serif;
@@ -87,7 +100,6 @@ h4.feed-item-title{
 
 .agenda-contain{
     grid-area: agenda-contain; 
-    
 }
 
 /* FORECAST STLIYNG */
