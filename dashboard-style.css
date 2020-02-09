@@ -33,16 +33,14 @@ main{
     display: grid;
     grid-template-areas: 
     "profile-contain profile-contain profile-contain"
-    "news-title  market-title   agenda-title"
+    "news-title market-title agenda-title"
     "news-contain market-contain agenda-contain" 
     "news-contain market-contain agenda-contain"
     "forecast-contain forecast-contain forecast-contain";
-    grid-template-rows: 100px 80px 200px 200px 120px;
+    grid-template-rows: 60px 40px 250px 250px 120px;
     grid-template-columns: 1fr 1fr 1fr; 
-    /* max-width: 900px; */
     position: relative;
-    /* margin: auto; */
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
     justify-content: center;
     width: 100%; 
     margin: .5rem; 
@@ -75,27 +73,26 @@ main{
     text-decoration-color: #707793;
 }
 
-.feed-title a{
+h4.feed-item-title{
     color: #3BBA9C; 
 }
-
-.feed-title-img{ 
-    padding: 0px .5rem 1rem 0px; 
-}
-
 
 /* MARKET STYLING */
 .market-contain{
     grid-area: market-contain; 
-    background-color: coral;
+    background-color: #3BBA9C;
 }
+
+/* AGNEDA STYLING */
 
 .agenda-contain{
     grid-area: agenda-contain; 
-    background-color: brown;
+    
 }
+
+/* FORECAST STLIYNG */
 
 .forecast-contain{
     grid-area: forecast-contain;
-    background-color: blue;
+    background-color: whtie;
 }
