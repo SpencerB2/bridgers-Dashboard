@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="dashboard-style.css">
     <link rel="stylesheet" href="scripts.js">
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -24,23 +25,37 @@
             <!-- add a collapsible menu under pay bills  -->
         </ul>
         <div class="hdr-bottom-contain">
-            <figure>
-                bottom profile photo
-            </figure>
-            <div>
-                Social Media Container
-            </div>
-         </div>
+            <span> Cell:</span> 901-604-0170
+        </div>
     </header> 
     <main>
         <section class="profile-contain">
             <h2 class="name-title">SPENCER BRIDGERS</h2>
-            <!-- <div>
-                tempurature (flex end or space between)
-            </div> -->
+            <script type="text/javascript"> 
+                var myDate = new Date(); 
+                var myDay = myDate.getDay(); 
+                
+                // Array of days. 
+                var weekday = ['Sunday', 'Monday', 'Tuesday', 
+                    'Wednesday', 'Thursday', 'Friday', 'Saturday' 
+                ]; 
+                document.write(weekday[myDay]); 
+                document.write(" | "); 
+                
+                // get hour value. 
+                var hours = myDate.getHours(); 
+                var ampm = hours >= 12 ? 'PM' : 'AM'; 
+                hours = hours % 12; 
+                hours = hours ? hours : 12; 
+                var minutes = myDate.getMinutes(); 
+                minutes = minutes < 10 ? '0' + minutes : minutes; 
+                var myTime = hours + " " +  " : " + minutes +  
+                    " - " + ampm; 
+                document.write(myTime); 
+            </script> 
         </section>
         <div class="news-title">
-            Today's News
+            <h4>Today's News</h4>
         </div>
         <section class="news-contain">     
             <div class="news-rss-feed">
@@ -57,20 +72,22 @@ Each feed item title is displayed in a <h4> tag with class feed-item-title.
 Each feed item description is displayed in a tag with class feed-item-desc. -->
         </section>
         <div class="market-title">
-            Todays Market
+            <h4> Todays Market </h4>
         </div>
         <section class="market-contain">
             <!-- TradingView Widget BEGIN -->
             <!-- https://www.tradingview.com/widget/advanced-chart/ -->
             <div class="tradingview-widget-container">
-                <div id="tradingview_a25f5"></div>
-                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"></a>
+                <div id="tradingview_a25f5">
+                </div>
+                <div class="tradingview-widget-copyright">
+                    <a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"></a>
                 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                 <script type="text/javascript">
                 new TradingView.widget(
                 {
-                "width": 400,
-                "height": 538,
+                "width": 600,
+                "height": 490,
                 "symbol": "NDAQ",
                 "interval": "D",
                 "timezone": "Etc/UTC",
@@ -90,13 +107,13 @@ Each feed item description is displayed in a tag with class feed-item-desc. -->
                         <!-- TradingView Widget END -->
 
         </section>
-        <div class="agenda-title">
+       <!-- <div class="agenda-title">
             Todays Agenda
         </div>
-        <section class="agenda-contain">
+        <section class="agenda-contain"> -->
             <!-- Widgit Source = https://calendar.google.com/calendar/r/settings/calendar/YnJpZGdlcnNraWRAZ21haWwuY29t -->
-            <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=YnJpZGdlcnNraWRAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043&amp;mode=WEEK" style="border:solid 1px #777" width="500" height="500" frameborder="0" scrolling="no"></iframe>
-        </section>
+            <!-- <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=YnJpZGdlcnNraWRAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043&amp;mode=WEEK" style="border:solid 1px #777" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+        </section> -->
         <footer class="forecast-contain">
             <a class="weatherwidget-io" href="https://forecast7.com/en/35d15n90d05/memphis/?unit=us" data-label_1="MEMPHIS" data-label_2="7 Day Forcast" data-theme="original" >MEMPHIS 7 Day Forcast</a>
             <script>

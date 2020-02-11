@@ -8,7 +8,7 @@ Light Navy: #707793
 html{
     color: #3BBA9C;
     font-size: 16px;
-    font-family: 'Monoton', cursive;
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 body{
@@ -24,6 +24,8 @@ header{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    align-items: center;
+
 }
 
 .menu-contain a{ 
@@ -46,15 +48,15 @@ header{
 main{ 
     display: grid;
     grid-template-areas: 
-    "profile-contain profile-contain profile-contain"
-    "news-title market-title agenda-title"
-    "news-contain market-contain agenda-contain" 
-    "news-contain market-contain agenda-contain"
-    "forecast-contain forecast-contain forecast-contain";
-    grid-template-rows: 60px 40px 250px 250px 50px;
-    grid-template-columns: 1fr 1fr 1fr; 
+    "profile-contain profile-contain "
+    "news-title market-title "
+    "news-contain market-contain " 
+    "news-contain market-contain "
+    "forecast-contain forecast-contain ";
+    grid-template-rows: 60px 40px 230px 230px 50px;
+    grid-template-columns: 1fr 1fr ; 
     position: relative;
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
     justify-content: center;
     width: 100%; 
     margin: .5rem; 
@@ -63,17 +65,29 @@ main{
 .profile-contain{
     grid-area: profile-contain; 
     background-color: white ;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
 }
 
+
 .name-title{
-    font-family: 'Black Ops One', cursive;
+    font-family: 'Cinzel Decorative', cursive;
     margin: 0px;
     font-size: 3rem; 
 }
 
+/* start title styling */
+
+.market-title , .news-title{ 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-family: 'Cinzel Decorative', cursive;
+}
+
 /* START NEWS STYLING */
 .news-title{
-    display:grid; 
     grid-area: news-title;
 }
 
@@ -93,16 +107,6 @@ main{
     text-decoration-color: #707793;
 }
 
-h4.feed-item-title{
-    color: #3BBA9C; 
-}
-
-/* MARKET STYLING */
-.market-contain{
-    grid-area: market-contain; 
-    background-color: white;
-}
-
 .feed-item-title a{
     color: black;
 }
@@ -112,14 +116,29 @@ h4.feed-item-title{
 }
 
 .feed-item-desc{ 
-    margin-bottom: 0.8rem; 
+    margin-bottom: 1rem; 
 }
 
-/* AGNEDA STYLING */
+/* MARKET STYLING */
+
+.market-contain{
+    grid-area: market-contain; 
+    background-color: white;
+    width: 5rem;
+    /* display: flex; */
+}
+
+.tradingview-widget-copyright{ 
+    justify-content: center;
+}
+
+
+
+/* AGNEDA STYLING
 
 .agenda-contain{
     grid-area: agenda-contain; 
-}
+} */
 
 /* FORECAST STLIYNG */
 

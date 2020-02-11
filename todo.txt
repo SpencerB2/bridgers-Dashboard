@@ -1,0 +1,6 @@
+create new grid style for smaller factoring
+- column oriented
+- resized widget
+- possibly new widget?
+
+Allow side bar to open and close
