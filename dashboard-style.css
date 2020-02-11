@@ -8,6 +8,7 @@ Light Navy: #707793
 html{
     color: #3BBA9C;
     font-size: 16px;
+    font-family: 'Monoton', cursive;
 }
 
 body{
@@ -64,6 +65,12 @@ main{
     background-color: white ;
 }
 
+.name-title{
+    font-family: 'Black Ops One', cursive;
+    margin: 0px;
+    font-size: 3rem; 
+}
+
 /* START NEWS STYLING */
 .news-title{
     display:grid; 
@@ -93,7 +100,19 @@ h4.feed-item-title{
 /* MARKET STYLING */
 .market-contain{
     grid-area: market-contain; 
-    background-color: #3BBA9C;
+    background-color: white;
+}
+
+.feed-item-title a{
+    color: black;
+}
+
+.feed-item-title{
+    margin-bottom: .5rem;
+}
+
+.feed-item-desc{ 
+    margin-bottom: 0.8rem; 
 }
 
 /* AGNEDA STYLING */
