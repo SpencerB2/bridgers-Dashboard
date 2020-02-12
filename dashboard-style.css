@@ -14,7 +14,7 @@ html{
 body{
  background-color: white;   
  display: flex;
- justify-content: center;
+ justify-content: center;   
 }
 
 header{ 
@@ -22,22 +22,78 @@ header{
     width: 200px;
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
-
 }
+
+/* Start Menu button styling */
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #3BBA9C;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+  /* End menu burger styling */
+
+
+.top-head-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
 
 .menu-contain a{ 
     text-decoration: none; 
     color: white; 
 }
 
+.menu-contain a:hover{ 
+    text-decoration: wavy; 
+    color: #3BBA9C; 
+}
+
+.menu-contain li{
+    padding-top: 2rem;
+}
+
+.menu-contain{
+    padding-left: 2.5rem;
+}
+
 .border-logo{
     margin: 0;
     border-radius: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .border-logo img{
@@ -45,22 +101,41 @@ header{
     border-radius: 5rem;
 }
 
+.hdr-bottom-contain{
+    margin-bottom: 2rem; 
+}
+
+
+/* Start main styling + GRID  */
+
 main{ 
     display: grid;
     grid-template-areas: 
-    "profile-contain profile-contain "
-    "news-title market-title "
-    "news-contain market-contain " 
-    "news-contain market-contain "
-    "forecast-contain forecast-contain ";
-    grid-template-rows: 60px 40px 230px 230px 50px;
+/*1*/    "profile-contain profile-contain "
+/*2*/    "news-title market-title "
+/*3*/    "news-contain market-contain " 
+/*4*/    "news-contain market-contain "
+/*5*/    "forecast-contain forecast-contain "
+/*6*/    "agenda-title agenda-title"
+/*7*/   " agenda-contain    agenda-contain";
+    grid-template-rows: 
+/*1*/    60px 
+/*2*/    40px 
+/*3*/    230px 
+/*4*/    230px 
+/*5*/    100px 
+/*6*/    40px 
+/*7*/    250px;
     grid-template-columns: 1fr 1fr ; 
     position: relative;
-    grid-gap: 1rem;
+    padding: 0 2rem 0 2rem;
+    gap: 2rem 3rem;
     justify-content: center;
     width: 100%; 
     margin: .5rem; 
 }
+
+/* START Page Title Styling  */
 
 .profile-contain{
     grid-area: profile-contain; 
@@ -77,12 +152,12 @@ main{
     font-size: 3rem; 
 }
 
-/* start title styling */
+/* start section title styling */
 
-.market-title , .news-title{ 
+.market-title , .news-title , .agenda-title{ 
     display: flex;
     justify-content: center; 
-    align-items: center; 
+    align-items: flex-end; 
     font-family: 'Cinzel Decorative', cursive;
 }
 
@@ -125,24 +200,70 @@ main{
     grid-area: market-contain; 
     background-color: white;
     width: 5rem;
-    /* display: flex; */
+    display: flex;
+    justify-self: flex-start;
 }
 
 .tradingview-widget-copyright{ 
     justify-content: center;
 }
 
+/* AGNEDA STYLING*/
 
-
-/* AGNEDA STYLING
+.agenda-title{
+    grid-area: agenda-title; 
+}
 
 .agenda-contain{
     grid-area: agenda-contain; 
-} */
+    display: flex;
+    justify-self: center;
+} 
 
 /* FORECAST STLIYNG */
 
 .forecast-contain{
     grid-area: forecast-contain;
     background-color: whtie;
+}
+
+
+/* START MEDIA QUERY STYLING */
+
+
+/* MEDIUM */
+@media only screen and (max-width:950px){
+    main{ 
+        display: grid;
+        grid-template-areas: 
+    /*1*/    "profile-contain profile-contain "
+    /*2*/    "news-title news-title "
+    /*3*/    "news-contain news-contain " 
+    /*4*/    "market-title market-title"
+    /*4*/    "market-contain market-contain "
+    /*5*/    "forecast-contain forecast-contain "
+    /*6*/    "agenda-title agenda-title"
+    /*7*/   " agenda-contain agenda-contain";
+        grid-template-rows: 
+    /*1*/    60px 
+    /*2*/    40px 
+    /*3*/    230px 
+    /*4*/    40px
+    /*4*/    230px 
+    /*5*/    230px 
+    /*6*/    40px 
+    /*7*/    250px;
+        grid-template-columns: 1fr 1fr ; 
+        position: relative;
+        padding: 0 2rem 0 2rem;
+        gap: 1rem 1rem;
+        justify-content: center;
+        width: 100%; 
+        margin: .5rem; 
+    }
+    
+}
+
+@media only screen and (max-width: 450px){
+    
 }

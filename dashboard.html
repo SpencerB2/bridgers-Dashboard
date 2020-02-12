@@ -14,18 +14,29 @@
 </head>
 <body>
     <header>
-        <figure class="border-logo">
-            <img src="./images/Headshot.jpg" alt="Spencer Heashot">
-        </figure>
+        <div class="top-head-container">
+            <figure class="border-logo">
+                <img src="./images/Headshot.jpg" alt="Spencer Heashot">
+            </figure>
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <script>
+                function myFunction(x) {x.classList.toggle("change");}
+            </script>
+           
+      </div>
         <ul class="menu-contain">
-            <li> <a href="www.spotify.com">Spotify</a> </li>
-            <li> <a href="">Daily Parable</a> </li>
-            <li> <a href="">Journal</a> </li>
-            <li> <a href="">Pay Bills</a> </li>
+            <li> <a href="https://www.spotify.com/us/">Spotify</a> </li>
+            <li> <a href="http://www.andrewburke.me/media/Gracian.pdf">Worldly Wisdom</a> </li>
+            <li> <a href="https://www.livejournal.com/">Journal</a> </li>
+            <li> <a href="http://www.mlgw.com/">Pay Bills</a> </li>
             <!-- add a collapsible menu under pay bills  -->
         </ul>
         <div class="hdr-bottom-contain">
-            <span> Cell:</span> 901-604-0170
+            <span> Cell:</span> <br> 901-604-0170
         </div>
     </header> 
     <main>
@@ -107,19 +118,19 @@ Each feed item description is displayed in a tag with class feed-item-desc. -->
                         <!-- TradingView Widget END -->
 
         </section>
-       <!-- <div class="agenda-title">
-            Todays Agenda
-        </div>
-        <section class="agenda-contain"> -->
-            <!-- Widgit Source = https://calendar.google.com/calendar/r/settings/calendar/YnJpZGdlcnNraWRAZ21haWwuY29t -->
-            <!-- <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=YnJpZGdlcnNraWRAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043&amp;mode=WEEK" style="border:solid 1px #777" width="500" height="500" frameborder="0" scrolling="no"></iframe>
-        </section> -->
         <footer class="forecast-contain">
             <a class="weatherwidget-io" href="https://forecast7.com/en/35d15n90d05/memphis/?unit=us" data-label_1="MEMPHIS" data-label_2="7 Day Forcast" data-theme="original" >MEMPHIS 7 Day Forcast</a>
             <script>
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
             </script>
         </footer>
+        <div class="agenda-title">
+            Todays Agenda
+        </div>
+        <section class="agenda-contain"> 
+            <!-- Widgit Source = https://calendar.google.com/calendar/r/settings/calendar/YnJpZGdlcnNraWRAZ21haWwuY29t -->
+            <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=YnJpZGdlcnNraWRAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043&amp;mode=WEEK" style="border:solid 1px #777" width="1000" height="500" frameborder="0" scrolling="no"></iframe>
+        </section>
     </main>
 </body>
 </html>
