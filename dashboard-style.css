@@ -241,10 +241,16 @@ main{
     .forecast-contain-small{
         display: none; 
     }
+    .market-contain-small{
+        display: none; 
+    }
+    .forecast-title{
+        display: none; 
+    }
     
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 501px){
     html{
         color: #3BBA9C;
         font-size: 12px;
@@ -269,18 +275,16 @@ main{
     /*4*/    "market-title"
     /*5*/    "market-contain-small"
     /*6*/    "forecast-title"
-    /*7*/    "forecast-contain-small"
-    /*8*/    "agenda-title"
-    /*9*/    "agenda-contain";
+    /*7*/    "forecast-contain-small";
+  
         grid-template-rows: 
     /*1*/    60px 
     /*2*/    40px 
     /*3*/    230px 
     /*4*/    40px
-    /*4*/    230px 
     /*5*/    230px 
-    /*6*/    40px 
-    /*7*/    250px;
+    /*7*/    40px 
+    /*8*/    250px;
         grid-template-columns: 1fr  ; 
         position: relative;
         padding: 0 2rem 0 2rem;
@@ -327,6 +331,7 @@ main{
     }
     .forecast-title{
         grid-area: forecast-title;
+        justify-items: center;
     }
     .forecast-contain{
         display: none;
@@ -334,8 +339,12 @@ main{
 
     .forecast-contain-small{
         grid-area: forecast-contain-small;
+        justify-content: center;
     }
 
+    .agenda-title{
+        display: none; 
+    }
     .agenda-contain{
         display: none; 
     }
