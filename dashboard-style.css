@@ -196,6 +196,11 @@ main{
 
 /* MARKET STYLING */
 
+.market-title{
+    grid-area: market-title;
+    /* justify-content: center; */
+}
+
 .market-contain{
     grid-area: market-contain; 
     background-color: white;
@@ -231,19 +236,42 @@ main{
 /* START MEDIA QUERY STYLING */
 
 
-/* MEDIUM */
-@media only screen and (max-width:950px){
+/* remove nonapplicable widgits for desktop version */
+@media only screen and (min-width:500px){
+    .forecast-contain-small{
+        display: none; 
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    html{
+        color: #3BBA9C;
+        font-size: 12px;
+        font-family: 'Cinzel Decorative', cursive;
+    }
+    
+    .name-title{
+        font-family: 'Cinzel Decorative', cursive;
+        margin: 0px;
+        font-size: 2rem; 
+    }
+
+    header{
+        display: none; 
+    }
     main{ 
         display: grid;
         grid-template-areas: 
-    /*1*/    "profile-contain profile-contain "
-    /*2*/    "news-title news-title "
-    /*3*/    "news-contain news-contain " 
-    /*4*/    "market-title market-title"
-    /*4*/    "market-contain market-contain "
-    /*5*/    "forecast-contain forecast-contain "
-    /*6*/    "agenda-title agenda-title"
-    /*7*/   " agenda-contain agenda-contain";
+    /*1*/    "profile-contain"
+    /*2*/    "news-title"
+    /*3*/    "news-contain" 
+    /*4*/    "market-title"
+    /*5*/    "market-contain-small"
+    /*6*/    "forecast-title"
+    /*7*/    "forecast-contain-small"
+    /*8*/    "agenda-title"
+    /*9*/    "agenda-contain";
         grid-template-rows: 
     /*1*/    60px 
     /*2*/    40px 
@@ -253,7 +281,7 @@ main{
     /*5*/    230px 
     /*6*/    40px 
     /*7*/    250px;
-        grid-template-columns: 1fr 1fr ; 
+        grid-template-columns: 1fr  ; 
         position: relative;
         padding: 0 2rem 0 2rem;
         gap: 1rem 1rem;
@@ -261,9 +289,54 @@ main{
         width: 100%; 
         margin: .5rem; 
     }
-    
-}
+    .news-contain{ 
+        grid-area: news-contain; 
+        background-color: white;
+        display: flex; 
+        justify-content: center;
+    }
 
-@media only screen and (max-width: 450px){
+    .news-rss-feed{
+        height: 95%;
+        width: 70vw;
+        overflow:auto;
+        background-color:whtie;
+        color:#3BBA9C;
+        scrollbar-base-color:gold;
+        font-family:sans-serif;
+        padding:10px;
+        text-decoration-color: #707793;
+    }
+
+    .market-contain-small{
+        grid-area: market-contain-small;
+        justify-content: center;
+    }
+
+    .market-contain{
+        display: none; 
+        grid-area: market-contain; 
+        background-color: white;
+        width: 5rem;
+        /* display: flex; */
+        /* justify-self: center; */
+    }
     
+    .tradingview-widget-copyright{ 
+        justify-content: center;
+    }
+    .forecast-title{
+        grid-area: forecast-title;
+    }
+    .forecast-contain{
+        display: none;
+    }
+
+    .forecast-contain-small{
+        grid-area: forecast-contain-small;
+    }
+
+    .agenda-contain{
+        display: none; 
+    }
 }
